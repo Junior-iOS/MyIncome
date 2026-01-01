@@ -29,20 +29,41 @@
 		147250462F0641DC005819EB /* MyIncomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyIncomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		147250652F0644DC005819EB /* Exceptions for "MyIncomeTests" folder in "MyIncome" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				MyIncomeTests.swift,
+			);
+			target = 1472502E2F0641DA005819EB /* MyIncome */;
+		};
+		147250662F0644DC005819EB /* Exceptions for "MyIncomeTests" folder in "MyIncomeTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				MyIncomeTests.swift,
+			);
+			target = 1472503B2F0641DC005819EB /* MyIncomeTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		147250312F0641DA005819EB /* MyIncome */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = MyIncome;
 			sourceTree = "<group>";
 		};
-		1472503F2F0641DC005819EB /* MyIncomeTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MyIncomeTests;
-			sourceTree = "<group>";
-		};
 		147250492F0641DC005819EB /* MyIncomeUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = MyIncomeUITests;
+			sourceTree = "<group>";
+		};
+		147250632F0644DC005819EB /* MyIncomeTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				147250652F0644DC005819EB /* Exceptions for "MyIncomeTests" folder in "MyIncome" target */,
+				147250662F0644DC005819EB /* Exceptions for "MyIncomeTests" folder in "MyIncomeTests" target */,
+			);
+			path = MyIncomeTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -76,8 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				147250312F0641DA005819EB /* MyIncome */,
-				1472503F2F0641DC005819EB /* MyIncomeTests */,
 				147250492F0641DC005819EB /* MyIncomeUITests */,
+				147250632F0644DC005819EB /* MyIncomeTests */,
 				147250302F0641DA005819EB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,6 +130,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				147250312F0641DA005819EB /* MyIncome */,
+				147250632F0644DC005819EB /* MyIncomeTests */,
 			);
 			name = MyIncome;
 			packageProductDependencies = (
@@ -129,9 +151,6 @@
 			);
 			dependencies = (
 				1472503E2F0641DC005819EB /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				1472503F2F0641DC005819EB /* MyIncomeTests */,
 			);
 			name = MyIncomeTests;
 			packageProductDependencies = (
@@ -400,11 +419,12 @@
 				DEVELOPMENT_TEAM = KTUAP2Z2QF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "My Incomes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -432,11 +452,12 @@
 				DEVELOPMENT_TEAM = KTUAP2Z2QF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "My Incomes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -24,6 +24,9 @@ struct WelcomeView: View {
             Spacer()
             getStartedButton
         }
+        .padding()
+        .infinityFrame()
+        .background(Color.appTheme.viewBackground)
     }
 }
 
@@ -45,16 +48,16 @@ private extension WelcomeView {
         Text("Effortlessly calculate your income.\nLet's get started!")
             .font(.title3)
             .fontWeight(.medium)
-            .foregroundStyle(.gray)
+            .foregroundStyle(Color.appTheme.secondaryText)
             .multilineTextAlignment(.center)
     }
     
     var getStartedButton : some View {
-        Button {
-            shouldShowWelcomeView = false
-        } label: {
-            Text("Get Started")
-        }
+        Text("Get started")
+            .primaryButton()
+            .button(.press) {
+                shouldShowWelcomeView = false
+            }
     }
 }
 

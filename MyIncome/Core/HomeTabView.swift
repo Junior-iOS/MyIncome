@@ -9,7 +9,30 @@ import SwiftUI
 
 struct HomeTabView: View {
     var body: some View {
-        Text("Home TabVew")
+        TabView {
+            incomeTabItemView
+            settingsTabItemView
+        }
+    }
+}
+
+private extension HomeTabView {
+    var incomeTabItemView: some View {
+        NavigationStack {
+            IncomeView()
+        }
+        .tabItem {
+            Image(systemName: "dollarsign.square")
+            Text("Income")
+        }
+    }
+    
+    var settingsTabItemView: some View {
+        SettingsView()
+            .tabItem {
+                Image(systemName: "gearshape.fill")
+                Text("Settings")
+            }
     }
 }
 

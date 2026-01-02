@@ -22,7 +22,7 @@ private extension HomeTabView {
             IncomeView()
         }
         .tabItem {
-            Image(systemName: "dollarsign.square")
+            Image(icon: .dollarSignSquare)
             Text("Income")
         }
     }
@@ -30,7 +30,7 @@ private extension HomeTabView {
     var settingsTabItemView: some View {
         SettingsView()
             .tabItem {
-                Image(systemName: "gearshape.fill")
+                Image(icon: .gearShapeFill)
                 Text("Settings")
             }
     }

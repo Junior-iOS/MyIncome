@@ -36,14 +36,12 @@ extension Pay {
     enum IncomeType {
         case gross
         case takeHome
-    }
-    
-    var description: String {
-        switch self.incomeType {
-        case .gross:
-            return "Gross"
-        case .takeHome:
-            return "Take-Home"
+        
+        var description: String {
+            switch self {
+            case .gross: "Gross"
+            case .takeHome: "Take-Home"
+            }
         }
     }
 }

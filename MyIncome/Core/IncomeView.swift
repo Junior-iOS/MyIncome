@@ -21,9 +21,45 @@ private extension IncomeView {
     var incomeView: some View {
         ScrollView {
             VStack(spacing: 16) {
-                
+                IncomePickerView($viewModel.incomePickerValue)
+                switch viewModel.incomePickerValue {
+                case .salary:
+                    salaryView
+                case .hourly:
+                    hourlyView
+                }
             }
+            .padding(.horizontal)
+            .padding(.vertical, 8)
         }
+    }
+    
+    @ViewBuilder
+    var salaryView: some View {
+        salaryInputView
+        salaryOutputView
+    }
+    
+    @ViewBuilder
+    var hourlyView: some View {
+        hourlyInputView
+        hourlyOutputView
+    }
+    
+    var salaryInputView: some View {
+        Text("salaryInputView")
+    }
+    
+    var salaryOutputView: some View {
+        Text("salaryOutputView")
+    }
+    
+    var hourlyInputView: some View {
+        Text("hourlyInputView")
+    }
+    
+    var hourlyOutputView: some View {
+        Text("hourlyOutputView")
     }
     
     @ToolbarContentBuilder

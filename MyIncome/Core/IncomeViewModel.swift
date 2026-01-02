@@ -19,6 +19,7 @@ final class IncomeViewModel: ObservableObject {
     @Published var salaryOutput: SalaryOutput = .init()
     @Published var hourlyInput: HourlyInput = .init()
     @Published var hourlyOutput: HourlyOutput = .init()
+    private var cancellables = Set<AnyCancellable>()
     
     var appName : String {
         appInfoStore.name
@@ -26,5 +27,27 @@ final class IncomeViewModel: ObservableObject {
     
     var shouldShowOvertimeCheck: Bool {
         (hourlyInput.hoursPerWeek ?? 0) > hourlyInput.hourPerWeekLimitForOvertime
+    }
+    
+    init() {
+        setSubscribers()
+    }
+    
+    private func setSubscribers() {
+        $salaryInput
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] salaryInput in
+                guard let self else { return }
+                salaryOutput = incomeStore.getSalaryOutput(for: salaryInput)
+            }
+            .store(in: &cancellables)
+        
+        $hourlyInput
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] hourlyInput in
+                guard let self else { return }
+                hourlyOutput = incomeStore.getHourlyOutput(for: hourlyInput)
+            }
+            .store(in: &cancellables)
     }
 }
